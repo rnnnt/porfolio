@@ -1,11 +1,78 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import Mail from "../components/icons/Mail.astro";
+import SocialPill from "../components/SocialPill.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<Layout
+  title="Portfolio de Renato - Diseñador Web y Móvil"
+  description="Contrata a Renato para poder crear interfaces más bonitas"
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
+      <h1
+        class="text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row pb-10 gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, soy Renato Ortiz
+        <a
+          href="https://www.linkedin.com/in/renato-ortiz-07a385286/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponibilidad para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+        <span>Medio año de experiencia.</span>
+        <span class="opacity-80"
+          >Desarrollador UI/UX y diseñador de contenido.<span></span>
+          <span class="text-red-500/90">
+            De Valparaiso, Chile.<span></span>
+            <span class="opacity-80"
+              >Me especializo en el diseño de prototipado y realización de
+              interfaces usuarias.<span></span>
+            </span>
+          </span>
+        </span>
+        <ul>
+          <nav class="flex gap-4 mt-8 flex-wrap">
+            <SocialPill
+              href="https://www.linkedin.com/in/renato-ortiz-07a385286/"
+            >
+              <LinkedIn class="size-4 md:size-6" />
+              LinkedIn
+            </SocialPill>
+
+            <SocialPill href="https://github.com/rnnnt">
+              <GitHub class="size-4 md:size-6" />
+              GitHub
+            </SocialPill>
+
+            <SocialPill href="https://github.com/rnnnt">
+              <Mail class="size-4 md:size-6" />
+              renatho313@gmail.com
+            </SocialPill>
+          </nav>
+        </ul>
+      </h2>
+    </SectionContainer>
+    <SectionContainer id="proyectos">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main></Layout
+>

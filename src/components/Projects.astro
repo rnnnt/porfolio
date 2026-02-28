@@ -1,0 +1,55 @@
+---
+import Elementor from "./icons/Elementor.astro";
+import Wordpress from "./icons/Wordpress.astro";
+
+const TAGS = {
+  WORDPRESS: {
+    name: "Wordpress",
+    class: "bg-blue-500/20 text-blue-500",
+    icon: Wordpress,
+  },
+  ELEMENTOR: {
+    name: "Elementor",
+    class: "bg-orange-500/20 text-orange-500",
+    icon: Elementor,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "CIBCON - Seguridad y Tecnología",
+    description:
+      "Diseño y desarrollo de página web para CIBCON, empresa dedicada a la seguridad y tecnología.",
+    link: "https://cibcon.com/",
+    github: "No GitHub",
+    image: "/src/assets/projects/svgl.webp",
+    tags: [TAGS.WORDPRESS, TAGS.ELEMENTOR],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-cyan-400 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-2">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-black/20"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${description}`}
+      />
+    </article>
+  ))
+}
