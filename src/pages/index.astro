@@ -1,5 +1,4 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
 import LinkedIn from "../components/icons/LinkedIn.astro";
@@ -20,6 +19,11 @@ import Projects from "../components/Projects.astro";
 >
   <main class="px-4">
     <SectionContainer class="py-44 pb-32">
+      <img
+        class="rounded-full w-20 h-20 mb-4"
+        src="/src/assets/rnnnt.jpeg"
+        alt="rnnnt photo"
+      />
       <h1
         class="text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row pb-10 gap-x-4 pb-6 lg:pb-10"
       >
@@ -45,31 +49,31 @@ import Projects from "../components/Projects.astro";
             </span>
           </span>
         </span>
-        <ul>
-          <nav class="flex gap-4 mt-8 flex-wrap">
-            <SocialPill
-              href="https://www.linkedin.com/in/renato-ortiz-07a385286/"
-            >
-              <LinkedIn class="size-4 md:size-6" />
-              LinkedIn
-            </SocialPill>
-
-            <SocialPill href="https://github.com/rnnnt">
-              <GitHub class="size-4 md:size-6" />
-              GitHub
-            </SocialPill>
-
-            <SocialPill href="https://github.com/rnnnt">
-              <Mail class="size-4 md:size-6" />
-              renatho313@gmail.com
-            </SocialPill>
-          </nav>
-        </ul>
       </h2>
+      <ul>
+        <nav class="flex gap-4 mt-8 flex-wrap">
+          <SocialPill
+            href="https://www.linkedin.com/in/renato-ortiz-07a385286/"
+          >
+            <LinkedIn class="size-4 md:size-6" />
+            LinkedIn
+          </SocialPill>
+
+          <SocialPill href="https://github.com/rnnnt">
+            <GitHub class="size-4 md:size-6" />
+            GitHub
+          </SocialPill>
+
+          <SocialPill href="https://github.com/rnnnt">
+            <Mail class="size-4 md:size-6" />
+            renatho313@gmail.com
+          </SocialPill>
+        </nav>
+      </ul>
     </SectionContainer>
     <SectionContainer id="proyectos">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-        <Code class="size-7" />
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class="size-12" />
         Proyectos
       </h2>
       <Projects />
